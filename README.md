@@ -2,7 +2,7 @@
 
 [![CI Pipeline](https://github.com/24CS074-RUDRA/24CS074-Practical-12-AWDF/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/24CS074-RUDRA/24CS074-Practical-12-AWDF/actions/workflows/ci.yml)
 
-This practical adds an automated CI workflow to the Practical 11 Task Management app. On every push to `main` and every pull request targeting `main`, GitHub Actions installs backend dependencies and runs the Jest/Supertest API tests. This demonstrates **Continuous Integration (CI)**; it does not automatically deploy the application, so it is not Continuous Deployment (CD).
+This practical adds an automated CI workflow to the Practical 11 Task Management app. On every push to `main` and every pull request targeting `main`, GitHub Actions installs backend dependencies, runs the Jest/Supertest API tests, installs frontend dependencies, and builds the React app. This demonstrates **Continuous Integration (CI)**; it does not automatically deploy the application, so it is not Continuous Deployment (CD).
 
 The practical report template, styled after the supplied previous-practical report, is [Practical 12 - CI-CD Report.docx](./docs/Practical%2012%20-%20CI-CD%20Report.docx). It contains the task write-up and clearly marked screenshot spaces. The [screenshot guide](./docs/screenshots/README.md) explains what to capture and how to insert your genuine screenshots in Word.
 
