@@ -4,6 +4,19 @@
 
 This practical adds an automated CI workflow to the Practical 11 Task Management app. On every push to `main` and every pull request targeting `main`, GitHub Actions installs backend dependencies and runs the Jest/Supertest API tests. This demonstrates **Continuous Integration (CI)**; it does not automatically deploy the application, so it is not Continuous Deployment (CD).
 
+The practical report template, styled after the supplied previous-practical report, is [Practical 12 - CI-CD Report.docx](./docs/Practical%2012%20-%20CI-CD%20Report.docx). It contains the task write-up and clearly marked screenshot spaces. The [screenshot guide](./docs/screenshots/README.md) explains what to capture and how to insert your genuine screenshots in Word.
+
+## Run the full-stack app
+
+From the project root in PowerShell:
+
+```powershell
+docker compose up --build -d
+docker compose ps
+```
+
+Open `http://localhost:5173` to use the app. Stop the containers when finished with `docker compose down`.
+
 ## Run tests locally
 
 From the project root in PowerShell:
@@ -43,15 +56,11 @@ This Practical 12 project is in its own repository: `https://github.com/24CS074-
 
 ## Screenshot checklist
 
-Save screenshots in `docs/screenshots/` and include evidence for:
+Press **Windows + Shift + S** to capture the selected evidence. Save screenshots in `docs/screenshots/`, then replace the matching placeholder in the Word report with **Insert > Pictures > This Device**. The detailed checklist is in [docs/screenshots/README.md](./docs/screenshots/README.md).
 
-1. `01-workflow-file.png` — the workflow at `.github/workflows/ci.yml`.
-2. `02-install-and-test.png` — the passing job's install and test steps.
-3. `03-failed-run.png` — the deliberately failing test run and assertion error.
-4. `04-passed-run.png` — the fixed commit's successful run.
-5. `05-readme-badge.png` — the CI badge showing its current status.
+Capture the deliberately failed Actions run before restoring the test expectation. Never include `.env` values, passwords, or JWTs.
 
-Capture the failed run before pushing the fix. GitHub Actions workflow failures can take a short time to appear; refresh the Actions page if needed.
+The local Docker and test checks have passed. The CI baseline has also passed in GitHub Actions; capture the failed and fixed runs after performing the demonstration steps above.
 
 ## CI versus CD
 
