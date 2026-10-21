@@ -1,6 +1,6 @@
 # Practical 12 — CI/CD Pipeline with GitHub Actions
 
-[![CI Pipeline](https://github.com/24CS074-RUDRA/24CS074-Practical-11-AWDF/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/24CS074-RUDRA/24CS074-Practical-11-AWDF/actions/workflows/ci.yml)
+[![CI Pipeline](https://github.com/24CS074-RUDRA/24CS074-Practical-12-AWDF/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/24CS074-RUDRA/24CS074-Practical-12-AWDF/actions/workflows/ci.yml)
 
 This practical adds an automated CI workflow to the Practical 11 Task Management app. On every push to `main` and every pull request targeting `main`, GitHub Actions installs backend dependencies and runs the Jest/Supertest API tests. This demonstrates **Continuous Integration (CI)**; it does not automatically deploy the application, so it is not Continuous Deployment (CD).
 
@@ -39,7 +39,7 @@ The tests exercise real API routes without requiring MongoDB: unauthenticated ta
    ```
 6. Open the newest Actions run and capture the green successful job.
 
-The repository should be connected to the Practical 11 GitHub repository before pushing. If Git reports that no remote is configured, check it with `git remote -v` and add the repository URL with `git remote add origin <repository-url>`.
+This Practical 12 project is in its own repository: `https://github.com/24CS074-RUDRA/24CS074-Practical-12-AWDF.git`. Confirm the remote with `git remote -v` before pushing commits.
 
 ## Screenshot checklist
 
