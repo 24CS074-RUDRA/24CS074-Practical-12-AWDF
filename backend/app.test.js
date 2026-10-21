@@ -5,7 +5,7 @@ describe('Task Management API', () => {
   test('GET /api/tasks rejects requests without authentication', async () => {
     const response = await request(app).get('/api/tasks');
 
-    expect(response.statusCode).toBe(200);
+    expect(response.statusCode).toBe(401);
     expect(response.body.error).toMatch(/no token/i);
   });
 
