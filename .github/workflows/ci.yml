@@ -11,11 +11,8 @@ permissions:
 
 jobs:
   build-and-test:
-    name: Install and test backend
+    name: Build and Test Application
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -27,8 +24,18 @@ jobs:
           cache: npm
           cache-dependency-path: backend/package-lock.json
 
-      - name: Install dependencies
+      - name: Install Backend Dependencies
+        working-directory: backend
         run: npm install
 
-      - name: Run automated tests
+      - name: Run Backend Automated Tests
+        working-directory: backend
         run: npm test
+
+      - name: Install Frontend Dependencies
+        working-directory: frontend
+        run: npm install
+
+      - name: Build Frontend Application
+        working-directory: frontend
+        run: npm run build
